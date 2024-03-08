@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\HouseStoreRequest;
+use App\Http\Requests\Admin\UpdateHouseRequest;
 use App\Models\Admin\House;
-use App\Models\SuperAdmin\University;
 use App\Models\SuperAdmin\Location;
-use Illuminate\Http\Request;
+use App\Models\SuperAdmin\University;
 
 class HouseController extends Controller
 {
@@ -17,6 +17,7 @@ class HouseController extends Controller
     public function index()
     {
         $houses = House::all();
+
         return view('admin.houses.index', compact('houses'));
     }
 
@@ -27,10 +28,9 @@ class HouseController extends Controller
     {
         $universities = University::all();
         $locations = Location::all();
-        
+
         return view('admin.houses.create', compact('universities', 'locations'));
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -40,12 +40,12 @@ class HouseController extends Controller
 
         $image = $request->file('image')->store('public/houses');
         $house = House::create([
-            'university' => $request->university,
+            'university_id' => $request->university_id,
             'image' => $image,
             'address' => $request->address,
             'city' => $request->city,
             'country' => $request->country,
-            'prop_location' => $request->prop_location,
+            'location_id' => $request->location_id,
             't_of_accommodation' => $request->t_of_accommodation,
             'rental_rate' => $request->rental_rate,
             'occ_date' => $request->occ_date,
@@ -59,15 +59,9 @@ class HouseController extends Controller
             'utilities' => $request->utilities,
             'amenities' => $request->amenities,
             'status' => $request->status,
+            'student_number' => $request->student_number,
+
         ]);
-
-        if ($request->has('universities')) {
-            $house->universities()->attach($request->universities);
-        }  
-
-        if ($request->has('location')) {
-            $house->locations()->attach($request->location);
-        }
 
         return redirect()->route('admin.houses.index')->with('success', 'House created successfully.');
     }
@@ -83,24 +77,43 @@ class HouseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(House $house)
     {
-        //
+        $universities = University::all();
+        $locations = Location::all();
+
+        return view('admin.houses.edit', [
+            'house' => $house,
+            'universities' => $universities,
+            'locations' => $locations,
+
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateHouseRequest $request, House $house)
     {
-        //
+
+        $house->update(
+            $request->safe()
+                ->collect()
+                ->filter()
+                ->all()
+        );
+
+        return redirect()->route('admin.houses.index')->with('success', 'House updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(House $house)
     {
-        //
+        $house->delete();
+
+        return redirect()->route('admin.houses.index')->with('success', 'House deleted successfully.');
+
     }
 }

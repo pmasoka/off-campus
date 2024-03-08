@@ -22,12 +22,12 @@ class HouseStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'university' => ['required'],
-            'image' => ['required', 'image'], 
+            'university_id' => ['required', 'exists:universities,id'],
+            'image' => ['required', 'image'],
             'address' => ['required'],
             'city' => ['required'],
             'country' => ['required'],
-            'prop_location' => ['required'],
+            'location_id' => ['required', 'exists:locations,id'],
             't_of_accommodation' => ['required'],
             'rental_rate' => ['required'],
             'occ_date' => ['required', 'date'],

@@ -3,17 +3,17 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\HouseController;
 use App\Http\Controllers\Admin\ReservationController;
-use App\Http\Controllers\SuperAdmin\UniversityController;
-use App\Http\Controllers\SuperAdmin\LocationController;
-use App\Http\Controllers\SuperAdmin\IndexController;
-use App\Http\Controllers\SuperAdmin\PermissionController;
-use App\Http\Controllers\SuperAdmin\RoleController;
-use App\Http\Controllers\SuperAdmin\UserController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Frontend\WelcomeController;
-use App\Http\Controllers\Frontend\UniversityController as FrontendUniversityController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Frontend\UniversityController as FrontendUniversityController;
+use App\Http\Controllers\Frontend\WelcomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuperAdmin\IndexController;
+use App\Http\Controllers\SuperAdmin\LocationController;
+use App\Http\Controllers\SuperAdmin\PermissionController;
+use App\Http\Controllers\SuperAdmin\RoleController;
+use App\Http\Controllers\SuperAdmin\UniversityController;
+use App\Http\Controllers\SuperAdmin\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,11 +34,9 @@ Route::get('/universities/{university}', [FrontendUniversityController::class, '
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])->name('auth.login');
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('auth.register');
 
-
-
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
-    Route::resource('/houses', HouseController::class);
+    Route::resource('houses', HouseController::class);
     Route::resource('/reservations', ReservationController::class);
 });
 
@@ -67,4 +65,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';

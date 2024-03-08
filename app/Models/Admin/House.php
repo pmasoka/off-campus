@@ -2,22 +2,23 @@
 
 namespace App\Models\Admin;
 
+use App\Models\SuperAdmin\Location;
+use App\Models\SuperAdmin\University;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\SuperAdmin\University;
-use App\Models\SuperAdmin\Location;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class House extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'university',
+        'university_id',
         'image',
         'address',
         'city',
         'country',
-        'prop_location',
+        'location_id',
         't_of_accommodation',
         'rental_rate',
         'occ_date',
@@ -31,15 +32,16 @@ class House extends Model
         'utilities',
         'amenities',
         'status',
+        'student_number',
     ];
 
-    public function universities()
+    public function university(): BelongsTo
     {
-        return $this->belongsTo(University::class, 'university_house');
+        return $this->belongsTo(University::class);
     }
 
-    public function locations()
+    public function location()
     {
-        return $this->belongsToMany(Location::class, 'location_house');
+        return $this->belongsTo(Location::class);
     }
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('tel_number');
             $table->dateTime('res_date');
-            $table->unsignedBigInteger('house_id');
+
             $table->integer('student_number');
             $table->timestamps();
         });

@@ -1,0 +1,25 @@
+{
+  "hash": "afcb7b9c",
+  "configHash": "dbf2428a",
+  "lockfileHash": "6d37dfe2",
+  "browserHash": "5e3ab77a",
+  "optimized": {
+    "alpinejs": {
+      "src": "../../../../../.yarn/berry/cache/alpinejs-npm-3.13.6-c0f4056cac-10c0.zip/node_modules/alpinejs/dist/module.esm.js",
+      "file": "alpinejs.js",
+      "fileHash": "1b201a37",
+      "needsInterop": false
+    },
+    "axios": {
+      "src": "../../../../../.yarn/berry/cache/axios-npm-1.6.7-d7b9974d1b-10c0.zip/node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "894d3073",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-CSAU5B4Q": {
+      "file": "chunk-CSAU5B4Q.js"
+    }
+  }
+}

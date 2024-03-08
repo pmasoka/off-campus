@@ -37,7 +37,7 @@ Route::get('/register', [RegisteredUserController::class, 'create'])->name('auth
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::resource('houses', HouseController::class);
-    Route::resource('/reservations', ReservationController::class);
+    Route::resource('reservations', ReservationController::class);
 });
 
 Route::middleware(['auth', 'verified', 'role:superadmin'])->name('superadmin.')->prefix('superadmin')->group(function () {

@@ -12,7 +12,6 @@ export default class extends Controller {
     };
 
     connect() {
-        console.log(this.choicesValue, this.itemsValue);
         const choices = new Choices(this.element, {
             choices: this.choicesValue,
             items: this.itemsValue,

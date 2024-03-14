@@ -17,12 +17,17 @@
                         enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
-                        <div class="mt-6 p-2 bg-slate-100">
+                        <div class="mt-6 p-2 bg-slate-100"
+                            {{ stimulus_controller('location', [
+                                'locations' => $locations,
+                            ]) }}>
                             <div class="sm:col-span-6 pt-5">
                                 <label for="universities"
                                     class="block text-sm font-medium text-gray-700">University</label>
                                 <div class="mt-1">
                                     <select id="universities" name="university_id"
+                                        {{ stimulus_action('location', 'filter', 'change') }}
+                                        {{ stimulus_target('location', 'university') }}
                                         class="form-select block w-full mt-1">
                                         @foreach ($universities as $university)
                                             <option value="{{ $university->id }}" @selected(old('university_id', $house->university_id) == $university->id)>
@@ -86,7 +91,9 @@
                                 <label for="location" class="block text-sm font-medium text-gray-700"> Property Location
                                 </label>
                                 <div class="mt-1">
-                                    <select id="location" name="location_id" class="form-select block w-full mt-1">
+
+                                    <select id="location" name="location_id" class="form-select block w-full mt-1"
+                                        {{ stimulus_target('location', 'select') }}>
                                         @foreach ($universities as $university)
                                             <optgroup label="{{ $university->name }}">
                                                 @foreach ($university->locations as $location)
@@ -96,7 +103,9 @@
                                             </optgroup>
                                         @endforeach
                                     </select>
+
                                 </div>
+
                                 @error('location')
                                     <div class="text-sm text-red-400">{{ $message }}</div>
                                 @enderror
@@ -151,8 +160,10 @@
                             </div>
 
                             <div class="sm:col-span-6 pt-4">
-                                <label for="no_of_washrooms" class="block text-sm font-medium text-gray-700"> Number
-                                    of Washrooms </label>
+                                <label for="no_of_washrooms" class="block text-sm font-medium text-gray-700">
+                                    Number
+                                    of Washrooms
+                                </label>
                                 <div class="mt-1">
                                     <input type="number" id="no_of_washrooms" name="no_of_washrooms"
                                         value="{{ old('no_of_washrooms', $house->no_of_washrooms) }}"

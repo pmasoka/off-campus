@@ -12,6 +12,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.9.2":
+  version: 7.24.0
+  resolution: "@babel/runtime@npm:7.24.0"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/3495eed727bf4a4f84c35bb51ab53317ae38f4bbc3b1d0a8303751f9dfa0ce6f5fb2afced72b76c3dd0d8bb2ccb84787559a4dee9886291a36b26f02f0f759b4
+  languageName: node
+  linkType: hard
+
 "@esbuild/aix-ppc64@npm:0.19.12":
   version: 0.19.12
   resolution: "@esbuild/aix-ppc64@npm:0.19.12"
@@ -170,6 +179,20 @@ __metadata:
   version: 0.19.12
   resolution: "@esbuild/win32-x64@npm:0.19.12"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@hotwired/stimulus@npm:^3.1.0":
+  version: 3.2.2
+  resolution: "@hotwired/stimulus@npm:3.2.2"
+  checksum: 10c0/3793919e353d28424f57d07e6b634bf6e8821c227acfa2a608aaa8bdfe7e80479acef12705168ca866f3c231399f4a939fb0cd089aaae04c406b3d885a3b35ea
+  languageName: node
+  linkType: hard
+
+"@hotwired/turbo@npm:^7.2.5":
+  version: 7.3.0
+  resolution: "@hotwired/turbo@npm:7.3.0"
+  checksum: 10c0/be7d273808d64e06682f413ea007b555ecc0077cfd846754fe3b1bca06ca1b9473184d95528f7de0f3002bbc7895d58a067845ba363c549229c3bc5870c981e2
   languageName: node
   linkType: hard
 
@@ -615,6 +638,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"choices.js@npm:^10.2.0":
+  version: 10.2.0
+  resolution: "choices.js@npm:10.2.0"
+  dependencies:
+    deepmerge: "npm:^4.2.2"
+    fuse.js: "npm:^6.6.2"
+    redux: "npm:^4.2.0"
+  checksum: 10c0/772e56e9dbf42b88cbb2167c7dd7441e7420d8e025bbe72e3dd00040e7f3c5129c5b0cbaaca018f135e693fd04416afb7e55b6a78a6455cdf8c435a11f2c0f47
+  languageName: node
+  linkType: hard
+
 "chokidar@npm:^3.5.3":
   version: 3.6.0
   resolution: "chokidar@npm:3.6.0"
@@ -709,6 +743,13 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10c0/cedbec45298dd5c501d01b92b119cd3faebe5438c3917ff11ae1bff86a6c722930ac9c8659792824013168ba6db7c4668225d845c633fbdafbbf902a6389f736
+  languageName: node
+  linkType: hard
+
+"deepmerge@npm:^4.2.2":
+  version: 4.3.1
+  resolution: "deepmerge@npm:4.3.1"
+  checksum: 10c0/e53481aaf1aa2c4082b5342be6b6d8ad9dfe387bc92ce197a66dea08bd4265904a087e75e464f14d1347cf2ac8afe1e4c16b266e0561cc5df29382d3c5f80044
   languageName: node
   linkType: hard
 
@@ -991,6 +1032,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fuse.js@npm:^6.6.2":
+  version: 6.6.2
+  resolution: "fuse.js@npm:6.6.2"
+  checksum: 10c0/c2fe4f234f516e9ea83b06f06f8f3c8b7117f51aa75bbccd052eed0c0423364bf1e360ffbf29cadae8ef6aa39476b7961eaf9d07bed779cea5c83d62b34e2df9
+  languageName: node
+  linkType: hard
+
 "glob-parent@npm:^5.1.2, glob-parent@npm:~5.1.2":
   version: 5.1.2
   resolution: "glob-parent@npm:5.1.2"
@@ -1195,6 +1243,13 @@ __metadata:
   version: 1.1.0
   resolution: "jsbn@npm:1.1.0"
   checksum: 10c0/4f907fb78d7b712e11dea8c165fe0921f81a657d3443dde75359ed52eb2b5d33ce6773d97985a089f09a65edd80b11cb75c767b57ba47391fee4c969f7215c96
+  languageName: node
+  linkType: hard
+
+"laravel-echo@npm:^1.15.0":
+  version: 1.16.0
+  resolution: "laravel-echo@npm:1.16.0"
+  checksum: 10c0/1620fe77e1ce939dde2926152b9204ef7ee7c1fdf7dda84398a9b3d50595fa0fd37eb3137333f2fdfdedaea12fc92aec2e3462bbeea2a7be9b6eb7c2ce35a1df
   languageName: node
   linkType: hard
 
@@ -1678,6 +1733,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pusher-js@npm:^8.0.1":
+  version: 8.3.0
+  resolution: "pusher-js@npm:8.3.0"
+  dependencies:
+    tweetnacl: "npm:^1.0.3"
+  checksum: 10c0/a641c96cfdcdc4df1b8b6eb37182d03eae3814f6d0700c09e3041677b714be73d0576668aee8f382b567d3c43ba817f91c88a5ecaa63fbf70a748e80d9c29234
+  languageName: node
+  linkType: hard
+
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -1700,6 +1764,22 @@ __metadata:
   dependencies:
     picomatch: "npm:^2.2.1"
   checksum: 10c0/6fa848cf63d1b82ab4e985f4cf72bd55b7dcfd8e0a376905804e48c3634b7e749170940ba77b32804d5fe93b3cc521aa95a8d7e7d725f830da6d93f3669ce66b
+  languageName: node
+  linkType: hard
+
+"redux@npm:^4.2.0":
+  version: 4.2.1
+  resolution: "redux@npm:4.2.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.9.2"
+  checksum: 10c0/136d98b3d5dbed1cd6279c8c18a6a74c416db98b8a432a46836bdd668475de6279a2d4fd9d1363f63904e00f0678a8a3e7fa532c897163340baf1e71bb42c742
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.14.0":
+  version: 0.14.1
+  resolution: "regenerator-runtime@npm:0.14.1"
+  checksum: 10c0/1b16eb2c4bceb1665c89de70dcb64126a22bc8eb958feef3cd68fe11ac6d2a4899b5cd1b80b0774c7c03591dc57d16631a7f69d2daa2ec98100e2f29f7ec4cc4
   languageName: node
   linkType: hard
 
@@ -1801,12 +1881,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
+    "@hotwired/stimulus": "npm:^3.1.0"
+    "@hotwired/turbo": "npm:^7.2.5"
     "@tailwindcss/forms": "npm:^0.5.2"
     alpinejs: "npm:^3.4.2"
     autoprefixer: "npm:^10.4.2"
     axios: "npm:^1.6.4"
+    choices.js: "npm:^10.2.0"
+    laravel-echo: "npm:^1.15.0"
     laravel-vite-plugin: "npm:^1.0.0"
     postcss: "npm:^8.4.31"
+    pusher-js: "npm:^8.0.1"
     tailwindcss: "npm:^3.1.0"
     vite: "npm:^5.0.0"
   languageName: unknown
@@ -2056,6 +2141,13 @@ __metadata:
   version: 0.1.13
   resolution: "ts-interface-checker@npm:0.1.13"
   checksum: 10c0/232509f1b84192d07b81d1e9b9677088e590ac1303436da1e92b296e9be8e31ea042e3e1fd3d29b1742ad2c959e95afe30f63117b8f1bc3a3850070a5142fea7
+  languageName: node
+  linkType: hard
+
+"tweetnacl@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "tweetnacl@npm:1.0.3"
+  checksum: 10c0/069d9df51e8ad4a89fbe6f9806c68e06c65be3c7d42f0701cc43dba5f0d6064686b238bbff206c5addef8854e3ce00c643bff59432ea2f2c639feab0ee1a93f9
   languageName: node
   linkType: hard
 

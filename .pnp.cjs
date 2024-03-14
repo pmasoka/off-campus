@@ -26,12 +26,17 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@hotwired/stimulus", "npm:3.2.2"],\
+          ["@hotwired/turbo", "npm:7.3.0"],\
           ["@tailwindcss/forms", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:0.5.7"],\
           ["alpinejs", "npm:3.13.6"],\
           ["autoprefixer", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:10.4.18"],\
           ["axios", "npm:1.6.7"],\
+          ["choices.js", "npm:10.2.0"],\
+          ["laravel-echo", "npm:1.16.0"],\
           ["laravel-vite-plugin", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:1.0.2"],\
           ["postcss", "npm:8.4.35"],\
+          ["pusher-js", "npm:8.3.0"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["vite", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:5.1.5"]\
         ],\
@@ -43,6 +48,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/@alloc-quick-lru-npm-5.2.0-eb83517088-10c0.zip/node_modules/@alloc/quick-lru/",\
         "packageDependencies": [\
           ["@alloc/quick-lru", "npm:5.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@babel/runtime", [\
+      ["npm:7.24.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/@babel-runtime-npm-7.24.0-7eb1dd11a2-10c0.zip/node_modules/@babel/runtime/",\
+        "packageDependencies": [\
+          ["@babel/runtime", "npm:7.24.0"],\
+          ["regenerator-runtime", "npm:0.14.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -250,6 +265,24 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/unplugged/@esbuild-win32-x64-npm-0.19.12-1bf4cb5f20/node_modules/@esbuild/win32-x64/",\
         "packageDependencies": [\
           ["@esbuild/win32-x64", "npm:0.19.12"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@hotwired/stimulus", [\
+      ["npm:3.2.2", {\
+        "packageLocation": "../../../.yarn/berry/cache/@hotwired-stimulus-npm-3.2.2-e1e064f1fe-10c0.zip/node_modules/@hotwired/stimulus/",\
+        "packageDependencies": [\
+          ["@hotwired/stimulus", "npm:3.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@hotwired/turbo", [\
+      ["npm:7.3.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/@hotwired-turbo-npm-7.3.0-579167aa60-10c0.zip/node_modules/@hotwired/turbo/",\
+        "packageDependencies": [\
+          ["@hotwired/turbo", "npm:7.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -801,6 +834,18 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["choices.js", [\
+      ["npm:10.2.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/choices.js-npm-10.2.0-30987d110b-10c0.zip/node_modules/choices.js/",\
+        "packageDependencies": [\
+          ["choices.js", "npm:10.2.0"],\
+          ["deepmerge", "npm:4.3.1"],\
+          ["fuse.js", "npm:6.6.2"],\
+          ["redux", "npm:4.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["chokidar", [\
       ["npm:3.6.0", {\
         "packageLocation": "../../../.yarn/berry/cache/chokidar-npm-3.6.0-3c413a828f-10c0.zip/node_modules/chokidar/",\
@@ -914,6 +959,15 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/supports-color",\
           "supports-color"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["deepmerge", [\
+      ["npm:4.3.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/deepmerge-npm-4.3.1-4f751a0844-10c0.zip/node_modules/deepmerge/",\
+        "packageDependencies": [\
+          ["deepmerge", "npm:4.3.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1182,6 +1236,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["fuse.js", [\
+      ["npm:6.6.2", {\
+        "packageLocation": "../../../.yarn/berry/cache/fuse.js-npm-6.6.2-c23861514a-10c0.zip/node_modules/fuse.js/",\
+        "packageDependencies": [\
+          ["fuse.js", "npm:6.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["glob", [\
       ["npm:10.3.10", {\
         "packageLocation": "../../../.yarn/berry/cache/glob-npm-10.3.10-da1ef8b112-10c0.zip/node_modules/glob/",\
@@ -1410,6 +1473,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/jsbn-npm-1.1.0-1da0181838-10c0.zip/node_modules/jsbn/",\
         "packageDependencies": [\
           ["jsbn", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["laravel-echo", [\
+      ["npm:1.16.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/laravel-echo-npm-1.16.0-94a886c6be-10c0.zip/node_modules/laravel-echo/",\
+        "packageDependencies": [\
+          ["laravel-echo", "npm:1.16.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2003,6 +2075,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["pusher-js", [\
+      ["npm:8.3.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/pusher-js-npm-8.3.0-c9c67210eb-10c0.zip/node_modules/pusher-js/",\
+        "packageDependencies": [\
+          ["pusher-js", "npm:8.3.0"],\
+          ["tweetnacl", "npm:1.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["queue-microtask", [\
       ["npm:1.2.3", {\
         "packageLocation": "../../../.yarn/berry/cache/queue-microtask-npm-1.2.3-fcc98e4e2d-10c0.zip/node_modules/queue-microtask/",\
@@ -2028,6 +2110,25 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["readdirp", "npm:3.6.0"],\
           ["picomatch", "npm:2.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["redux", [\
+      ["npm:4.2.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/redux-npm-4.2.1-e7e2cf2e37-10c0.zip/node_modules/redux/",\
+        "packageDependencies": [\
+          ["redux", "npm:4.2.1"],\
+          ["@babel/runtime", "npm:7.24.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["regenerator-runtime", [\
+      ["npm:0.14.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/regenerator-runtime-npm-0.14.1-a6c97c609a-10c0.zip/node_modules/regenerator-runtime/",\
+        "packageDependencies": [\
+          ["regenerator-runtime", "npm:0.14.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2091,12 +2192,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["root-workspace-0b6124", "workspace:."],\
+          ["@hotwired/stimulus", "npm:3.2.2"],\
+          ["@hotwired/turbo", "npm:7.3.0"],\
           ["@tailwindcss/forms", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:0.5.7"],\
           ["alpinejs", "npm:3.13.6"],\
           ["autoprefixer", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:10.4.18"],\
           ["axios", "npm:1.6.7"],\
+          ["choices.js", "npm:10.2.0"],\
+          ["laravel-echo", "npm:1.16.0"],\
           ["laravel-vite-plugin", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:1.0.2"],\
           ["postcss", "npm:8.4.35"],\
+          ["pusher-js", "npm:8.3.0"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["vite", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:5.1.5"]\
         ],\
@@ -2366,6 +2472,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../../.yarn/berry/cache/ts-interface-checker-npm-0.1.13-0c7b064494-10c0.zip/node_modules/ts-interface-checker/",\
         "packageDependencies": [\
           ["ts-interface-checker", "npm:0.1.13"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tweetnacl", [\
+      ["npm:1.0.3", {\
+        "packageLocation": "../../../.yarn/berry/cache/tweetnacl-npm-1.0.3-b7eef04660-10c0.zip/node_modules/tweetnacl/",\
+        "packageDependencies": [\
+          ["tweetnacl", "npm:1.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
